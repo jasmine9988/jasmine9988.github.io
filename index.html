@@ -1,53 +1,220 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title>PatSnap Product User Diagnostic Tool</title>
+		<style type="text/css">
+		/*样式*/
+		body{
+			font-size: 14px;
+			font-family: Noto Sans SC, Source Han Sans CN, Source Han Sans SC, -apple-system, PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, ST Heiti, SimHei, Arial, sans-serif;
+		}
+		
+		h2 {
+			color:cornflowerblue;
+		}
+		
+		div{
+			background-color: lightyellow;
+			color:grey;
+			padding:1px;
+			margin-top: 2px;
+		}
+		
+		table,tr,td{
+		    border:solid 1px #dfe1e6;
+			border-collapse:collapse;
+			padding:4px;
+			width: 1500px;
+			font-size: 14px;
+			color: #020A17;
+		}
+		td.info{
+			background-color: #fafbfc;
+			color: #616161;
+		}
+		[name~=normal]{
+			color:#45A321;
+		}
+		
+		[name~=invalid]{
+			color:#d11a32;
+		}
+		
+		col{
+			align:left;
+		}
+		span.tip{
+			font-size:14px;
+			font-style: italic;
+			color:#8993a4;
+			
+		}
+		</style>
 	</head>
 	<body>
-		<h3 style="color: cornflowerblue;">基础信息</h3>
-		<table border="1" frame="below" bgcolor="" width="1500">
-			<col align="left" width="25%"/>
-			<col align="left" width="75%"/>
+		<!--竖线是如何实现的  文本点击事件？ 如何引入文案-->
+
+		<span>
+			<img src="img/patsnapLogo.png" align="absbottom"/>
+		</span>
+
+		<span>|</span>
+		<span>智慧芽产品用户诊断工具</span>
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+		<span>400-694-4481 |</span>
+		<a href="mailto:support@patsnap.com">support@patsnap.com</a>
+		
+		<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span>中文</span>
+		<span>|</span>
+		<span>English</span>
+
+		
+		<div>
+			<p align="center" ">此页面仅用于定位您的浏览器和网络信息，不涉及您的隐私信息，请放心使用。</p>
+		</div>
+        
+		<h2>基础信息</h2>
+		<table border="1">
+			<col width="25%"/>
+			<col width="75%"/>
 			<tr>
-				<td align="left">用户代理</td>
+				<td class="info">用户代理</td>
 				<td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36</td>
 			</tr>
 			<tr>
-			    <td>系统信息</td>
+			    <td class="info">系统信息</td>
 				<td>WinOther</td>
 			</tr>
 			<tr>
-				<td>浏览器信息</td>
+				<td class="info">浏览器信息</td>
 				<td>Chromium 100</td>
 			</tr>
-		</table>
-		
-		<h3 style="color: cornflowerblue;">网络信息</h3>
-		<table border="1" width="1500">
-			<col align="left" width="25%"/>
 			<tr>
-				<td>&nbsp;</td>
+				<td class="info">JavaScript 状态</td>
+				<td>已开启 (version: 1.7)</td>
+			</tr>
+			<tr>
+				<td class="info">Cookie 状态</td>
+				<td>已开启</td>
+			</tr>
+			<tr>
+				<td class="info">LocalStorage 状态</td>
+				<td>已开启</td>
+			</tr>
+			<tr>
+				<td class="info">SessionStorage 状态</td>
+				<td>已开启</td>
+			</tr>
+			<tr>
+				<td class="info">剩余 storage 容量</td>
+				<td>152999470694 Byte</td>
+			</tr>
+			<tr>
+				<td class="info">IP 地址</td>
+				<td>104.171.225.7</td>
+			</tr>
+			<tr>
+				<td class="info">有 IPv6 地址</td>
+				<td>无</td>
+			</tr>
+			<tr>
+				<td class="info">WebGL2</td>
+				<td>支持</td>
+			</tr>
+			<tr>
+				<td class="info">patsnap.io</td>
+				<td>畅通</td>
+			</tr>
+		</table>
+
+				
+		<h2>网络信息                   <span class="tip">下面仅是单次检测结果，可以多刷新几次试试。</span></h2>
+		<table>
+			<col width="25%"/>
+			<tr>
+				<td class="info">&nbsp;</td>
 				<td>HTML资源</td>
 				<td>JS资源</td>
 				<td>图片资源</td>
 			</tr>
 			<tr>
-				<td>首页</td>
-				<td>体验差</td>
-				<td>正常</td>
-				<td>正常</td>
+				<td class="info">首页</td>
+				<td name="invalid">体验差</td>
+				<td name="normal">正常(~130ms)</td>
+				<td name="normal">正常(~130ms)</td>
 			</tr>
 			<tr>
-				<td>数据库</td>
-				<td>正常</td>
-				<td>连接失败</td>
-				<td>连接失败</td>
+				<td class="info">数据库</td>
+				<td name="normal">正常(~135ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">英策</td>
+				<td name="normal">正常(~135ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">用户中心</td>
+				<td name="normal">正常(~143ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">仪表盘</td>
+				<td name="normal">正常(~130ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">工作空间</td>
+				<td name="normal">正常(~135ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">管理员工作台</td>
+				<td name="normal">正常(~140ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">智慧芽学院企业版</td>
+				<td name="normal">正常(~159ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">帮助中心</td>
+				<td name="normal">正常(~139ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
+			</tr>
+			<tr>
+				<td class="info">Lab</td>
+				<td name="normal">正常(~240ms)</td>
+				<td name="invalid">连接失败</td>
+				<td name="invalid">连接失败</td>
 			</tr>
 		</table>
-		
-		
-		<h4></h4>
+		<aside>
+		<div style="margin-top:5px">
+		<p>
+		   检测到你的设备无法正常访问以下域名，请联系您的网络管理员或智慧芽客服解决。
+		   <br/>
+		   <ul type="circle">
+			   <li>https://analytics.zhihuiya.com</li>
+			   <li>https://insights.zhihuiya.com</li>
+		   </ul>
+           <b>提示:</b> 只有特定域名不能正常访问时，可以考虑检查一下：浏览器是否启用了广告拦截插件或设置，另外域名解析服务（DNS）工作异常也会造成这个问题。
+		</p>
+		</aside>
+
+		</div>
+		<a href="https://www.zhihuiya.com/legal/terms" target="_blank" >隐私政策</a>
+
 	</body>
 </html>
