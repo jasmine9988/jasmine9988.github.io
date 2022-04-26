@@ -8,6 +8,7 @@
 		body{
 			font-size: 14px;
 			font-family: Noto Sans SC, Source Han Sans CN, Source Han Sans SC, -apple-system, PingFang SC, Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, ST Heiti, SimHei, Arial, sans-serif;
+		    width:auto;
 		}
 		div.main{
 			margin:16px;
@@ -17,12 +18,12 @@
 		}
 		
 	    span.left{
-			position: fixed;
+			position: relative;
 			left:16px;
 			margin:16px;
 		}
 		span.right{
-			position: fixed;
+			position: relative;
 			right:16px;
 			margin:16px;
 		}
@@ -70,7 +71,6 @@
 		</style>
 	</head>
 	<body>
-		<!--竖线是如何实现的  文本点击事件？ 如何引入文案-->
         <div class="header">
 			<span class="left">
 				<span>
@@ -148,8 +148,15 @@
 				</table>
 			</div>
 			<div class="networkinfo">
-				<h2>网络信息</h2>
-				<span class="note">下面仅是单次检测结果，可以多刷新几次试试。</span>
+				<div>
+				<div style="display:inline-block;float=left"><h2>网络信息</h2></div>		
+				<div style="font-style: italic;font-size:14px;color:#8993a4; display:inline-block;float:right">下面仅是单次检测结果，可以多刷新几次试试。</div>	
+				</div>
+	
+				
+			
+				
+				
 				<table>
 					<col width="25%"/>
 					<tr>
@@ -274,21 +281,4 @@
 		</div>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
