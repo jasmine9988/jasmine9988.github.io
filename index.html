@@ -14,18 +14,7 @@
 			margin:16px;
 		}
         div.header{
-			width:auto;
-		}
-		
-	    span.left{
-			position: relative;
-			left:16px;
-			margin:16px;
-		}
-		span.right{
-			position: relative;
-			right:16px;
-			margin:16px;
+			padding:px;
 		}
 		span.test{
 			border-right:1px #DFE1E6 solid;
@@ -35,7 +24,7 @@
 			background-color: #fdf6ec;
 			color:#8993a4;
 			padding: 8px;
-			margin-top:16px;
+			margin-top: 16px;
 		}
 		h2 {
 			color:cornflowerblue;
@@ -72,23 +61,22 @@
 	</head>
 	<body>
         <div class="header">
-			<span class="left">
-				<span>
-					<img src="img/patsnapLogo.png" align="absbottom""/>
-				</span>
+			<div style="display:inline-block;float:left">
+				<img src="img/patsnapLogo.png" align="absbottom""/>
 				<span class="test"></span>
 				<span style="color:#8993a4;font-weight:700;font-size: 16px">智慧芽产品用户诊断工具</span>
-			</span>
-            <span class="right">
+			</div>	
+			<div style="display:inline-block;float:right">
 				<span>400-694-4481</span>
 				<span class="test"></span>
 				<a href="mailto:support@patsnap.com" style="padding-right:10px" >support@patsnap.com</a>
 				<span>中文</span>
 				<span class="test"></span>
 				<span>English</span>
-			</span>
+			</div>
 		</div>  
-        <div class="main">
+		<div style="border-bottom: 1px solid #DFE1E6;"> </div>
+		<div class="main">
 			<div class="message">
 				<p align="center">此页面仅用于定位您的浏览器和网络信息，不涉及您的隐私信息，请放心使用。</p>
 			</div>
@@ -148,15 +136,10 @@
 				</table>
 			</div>
 			<div class="networkinfo">
-				<div>
-				<div style="display:inline-block;float=left"><h2>网络信息</h2></div>		
-				<div style="font-style: italic;font-size:14px;color:#8993a4; display:inline-block;float:right">下面仅是单次检测结果，可以多刷新几次试试。</div>	
+				<div style="float:left;display:inline-block">
+				<h2>网络信息</h2>	
 				</div>
-	
-				
-			
-				
-				
+				<div style="font-style: italic;font-size:14px;color:#8993a4; display:inline-block;float:right;padding-top:16px">下面仅是单次检测结果，可以多刷新几次试试。</div>	
 				<table>
 					<col width="25%"/>
 					<tr>
@@ -281,4 +264,3 @@
 		</div>
 	</body>
 </html>
-
